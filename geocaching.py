@@ -243,7 +243,20 @@ class Geocaching(object):
         try:
             return login_page.find("a", "li-user-info").find_all("span")[1].text
         except AttributeError:
+			# Modiffied by Tamara Civera to obtain username in new page structure
+            try:
+                str_page = str(login_page)
+                str_pages = str_page.split("\n")
+                for line in str_pages:
+                    line = line.replace(" ", "")
+                    if '"username":' in line or "'username':" in line:
+                        user = line.replace("'", "").replace('"', "").replace("username:", "").replace(",", "")
+                        if user != "":
+                            return user
+            except Exception:
+                pass
             return None
+
 
     def search(self, point, limit=float("inf")):
         """Return a generator of caches around some point.
