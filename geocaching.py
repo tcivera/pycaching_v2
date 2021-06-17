@@ -11,11 +11,11 @@ import enum
 from typing import Optional, Union
 from urllib.parse import parse_qs, urljoin, urlparse
 from os import path
-from pycaching.cache import Cache, Size
-from pycaching.log import Log, Type as LogType
-from pycaching.geo import Point, Rectangle
-from pycaching.trackable import Trackable
-from pycaching.errors import Error, NotLoggedInException, LoginFailedException, PMOnlyException, TooManyRequestsError
+from pycaching_v2.cache import Cache, Size
+from pycaching_v2.log import Log, Type as LogType
+from pycaching_v2.geo import Point, Rectangle
+from pycaching_v2.trackable import Trackable
+from pycaching_v2.errors import Error, NotLoggedInException, LoginFailedException, PMOnlyException, TooManyRequestsError
 
 
 class SortOrder(enum.Enum):

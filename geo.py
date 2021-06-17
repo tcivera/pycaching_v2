@@ -10,8 +10,8 @@ import geopy.distance
 import geopy.format
 from statistics import mean
 from collections import namedtuple
-from pycaching.errors import ValueError as PycachingValueError, GeocodeError, BadBlockError, Error
-from pycaching.util import lazy_loaded
+from pycaching_v2.errors import ValueError as PycachingValueError, GeocodeError, BadBlockError, Error
+from pycaching_v2.util import lazy_loaded
 
 
 def to_decimal(deg, min):

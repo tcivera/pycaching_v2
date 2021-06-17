@@ -2,8 +2,8 @@
 
 import datetime
 import enum
-from pycaching import errors
-from pycaching.util import parse_date
+from pycaching_v2 import errors
+from pycaching_v2.util import parse_date
 
 # prefix _type() function to avoid colisions with log type
 _type = type

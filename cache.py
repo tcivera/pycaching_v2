@@ -6,11 +6,11 @@ import re
 import enum
 import os
 from bs4.element import Script
-from pycaching import errors
-from pycaching.geo import Point
-from pycaching.trackable import Trackable
-from pycaching.log import Log, Type as LogType
-from pycaching.util import parse_date, rot13, lazy_loaded
+from pycaching_v2 import errors
+from pycaching_v2.geo import Point
+from pycaching_v2.trackable import Trackable
+from pycaching_v2.log import Log, Type as LogType
+from pycaching_v2.util import parse_date, rot13, lazy_loaded
 
 # prefix _type() function to avoid collisions with cache type
 _type = type

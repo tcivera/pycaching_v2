@@ -7,7 +7,7 @@ import warnings
 import inspect
 import functools
 from datetime import datetime
-from pycaching import errors
+from pycaching_v2 import errors
 
 
 _rot13codeTable = str.maketrans(
