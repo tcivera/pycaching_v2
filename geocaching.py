@@ -149,7 +149,6 @@ class Geocaching(object):
         after_login_page = self._request(self._urls["login_page"], method="POST",
                                          data=post, login_check=False)
 
-        print(after_login_page)
         logging.debug("Checking the result.")
         if self.get_logged_user(after_login_page):
             logging.info("Logged in successfully as {}.".format(username))
