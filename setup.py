@@ -4,8 +4,6 @@ setup(name='pycaching_v2',
       version='1.0.0',
       description="My own pycaching library based on the officila one",
       author='Tamara Civera',
-      author_email=',
-      url='',
       license='GPL3',
       classifiers=[
         "Programming Language :: Python",
