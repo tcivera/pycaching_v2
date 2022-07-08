@@ -691,9 +691,6 @@ class Cache(object):
         self.pm_only = root.find("section", "premium-upgrade-widget") is not None
 
         cache_details = root.find(id="ctl00_divContentMain") if self.pm_only else root.find(id="cacheDetails")
-        print("HOLA")
-        print("ctl00_divContentMain" if self.pm_only else "cacheDetails")
-        print(root)
 
         # details also available for basic members for PM only caches -----------------------------
 
@@ -721,7 +718,8 @@ class Cache(object):
                 self.wp = root.title.string.split(" ")[0]
             except:
                 raise errors.LoadError()
-            self.name = cache_details.find("h2").text
+            #self.name = cache_details.find("h2").text
+            self.name = cache_details.find(id="ctl00_ContentBody_CacheName").text
 
             self.author = cache_details("a")[1].text
 
