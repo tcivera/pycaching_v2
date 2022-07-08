@@ -913,7 +913,6 @@ class Cache(object):
         :param bs4.BeautifulSoup soup: Parsed html document of the cache details page.
         """
         lbl_find_counts = soup.find("span", {"id": "ctl00_ContentBody_lblFindCounts"})
-        log_totals = 0
         try:
             log_totals = lbl_find_counts.find("p", "LogTotals")
             log_totals.text
