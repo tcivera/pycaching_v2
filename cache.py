@@ -917,11 +917,7 @@ class Cache(object):
             log_totals = lbl_find_counts.find("p", "LogTotals")
             log_totals.text
         except:
-            try:
-                log_totals = lbl_find_counts.find("li", "LogTotals")
-                log_totals.text
-            except:
-                pass
+            log_totals = lbl_find_counts.find("li")
 
         # Text gives numbers separated by a lot of spaces, splitting retrieves the numbers.
         # The values might contain thousand separators, which we have to remove before converting
