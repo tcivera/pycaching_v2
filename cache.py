@@ -691,6 +691,9 @@ class Cache(object):
         self.pm_only = root.find("section", "premium-upgrade-widget") is not None
 
         cache_details = root.find(id="ctl00_divContentMain") if self.pm_only else root.find(id="cacheDetails")
+        print("HOLA")
+        print("ctl00_divContentMain" if self.pm_only else "cacheDetails")
+        print(root)
 
         # details also available for basic members for PM only caches -----------------------------
 
